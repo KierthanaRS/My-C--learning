@@ -1,0 +1,19 @@
+//pointers are used because when u swap using function, the variables are called by values and the actual value of the variable doesn't gets changed. Using pointer helps
+//u to change the value permanently.
+#include<iostream>
+using namespace std;
+void swap(int *a,int *b){
+    int temp=*a;
+    *a=*b;
+    *b=temp;
+
+}
+int main(){
+    int a=2;
+    int b=4;
+    int *aptr=&a;
+    int *bptr=&b;
+    swap(aptr,bptr);
+    cout<<a<<" "<<b;
+    return 0;
+}
